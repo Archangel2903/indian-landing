@@ -9,108 +9,134 @@
 <body>
 <!-- BODY -->
 <div class="main-wrapper">
+    <div class="section-bg">
+        <picture>
+            <img src="<%= require('./img/bg.png') %>" class="section-bg__img" alt="" title="">
+        </picture>
+    </div>
     <!-- HEADER -->
     <header class="header">
-        <div class="container bg-light">
-            <h1>Header Title</h1>
+        <div class="container-fluid">
+            <a href="/" class="logo">
+                <picture>
+                    <img src="<%= require('./img/logo.svg') %>" alt="" title="">
+                </picture>
+            </a>
         </div>
     </header>
     <!-- HEADER END -->
 
     <!-- CONTENT -->
     <main class="content">
-        <div class="section">
-            <div class="container">
-                <h2>Section Slider</h2>
+        <div class="section section-aviator">
+            <div class="container-fluid">
+                <div class="aviator">
+                    <picture class="aviator__pic">
+                        <source media="(min-widt: 992px;)" srcset="<%= require('./img/aviator_lg.png') %>">
+                        <img src="<%= require('./img/aviator_sm.png') %>" alt="" title="">
+                    </picture>
 
-                <div class="main-slider swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+                    <div class="aviator__content">
+                        <div class="aviator__content-text">
+                            <p class="aviator__text">Fly with us!</p>
+                            <p class="aviator__text-strong"><span>5 FreeBets</span><br>on AVIATOR!</p>
                         </div>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
+                        <form action="" method="post" class="form">
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <select class="select2 js-example-placeholder-single" data-placeholder="Select country" style="width: 100%;">
+                                        <option></option>
+                                        <option value="01">India</option>
+                                        <option value="02">India 2</option>
+                                        <option value="03">India 3</option>
+                                        <option value="04">India 4</option>
+                                        <option value="05">India 5</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <select class="select2 js-example-placeholder-single" data-placeholder="Select city" style="width: 100%;">
+                                        <option></option>
+                                        <option value="01">City 1</option>
+                                        <option value="02">City 2</option>
+                                        <option value="03">City 3</option>
+                                        <option value="04">City 4</option>
+                                        <option value="05">City 5</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <select class="select2 js-example-placeholder-single" data-placeholder="Select currency" style="width: 100%;">
+                                        <option></option>
+                                        <option value="01">EUR (Euro)</option>
+                                        <option value="02">USD (Dollar)</option>
+                                        <option value="03">GBP (Pound Sterling)</option>
+                                        <option value="04">INR (Indian Rupee)</option>
+                                        <option value="05">CNY (Yuan)</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <label class="form-group">
+                                        <input type="email" class="form-control" placeholder="E-mail">
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-group">
+                                        <input type="tel" class="form-control" placeholder="Phone number">
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-group">
+                                        <input type="text" class="form-control" placeholder="Firstname">
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-group">
+                                        <input type="text" class="form-control" placeholder="Surname">
+                                    </label>
+                                </div>
+                            </div>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <label class="form-group">
+                                        <button type="button" class="form-button-pass">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-pass-visible"></use>
+                                            </svg>
+                                        </button>
+                                        <input type="password" class="form-control" placeholder="Password">
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-group">
+                                        <input type="password" class="form-control" placeholder="Re-enter password">
+                                    </label>
+                                </div>
+                            </div>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <label class="form-group">
+                                        <input type="text" class="form-control" placeholder="Promo code">
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button type="button" class="btn btn-primary w-100 h-100">Get now</button>
+                                </div>
+                            </div>
+
+                            <p class="form-text">By clicking this button you confirm that you have read and agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy
+                                Policy</a> of the company, consent to the processing of your personal information and confirm that you are of legal age.</p>
+                        </form>
                     </div>
-
-                    <div class="swiper-pagination"></div>
-
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!--<div class="swiper-scrollbar"></div>-->
                 </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="container">
-                <h2>Section Pictures</h2>
-                <picture>
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="loader" title="loader">
-                </picture>
-
-                <svg>
-                    <use xlink:href="img/spritemap.svg#sprite-ok"></use>
-                </svg>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="container">
-                <h2>Section Range slider</h2>
-
-                <div class="slider-range"><input type="range" value="75" min="1" max="100"></div>
-                <div class="slider-range"><input type="range" value="275" max="1000"></div>
-                <div class="slider-range"><input type="range"></div>
-
-                <br>
-
-                <div class="slider-handles"><input type="range" min="2000" max="10000"></div>
-                <div class="slider-handles"><input type="range" max="1000"></div>
-                <div class="slider-handles"><input type="range"></div>
             </div>
         </div>
     </main>
     <!-- CONTENT END -->
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
-        </div>
-    </footer>
-    <!-- FOOTER END -->
-</div>
-
-<div class="preload-wrapper">
-    <div class="icon-load">
-        <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
-    </div>
 </div>
 <!-- BODY END   -->
 </body>
