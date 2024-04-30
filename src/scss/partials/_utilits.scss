@@ -20,7 +20,7 @@
 
   min-width: 320px;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   overflow: hidden;
   padding: 0;
   position: relative;
@@ -217,7 +217,7 @@ form {
         &-selection--single {
           height: 40px;
           padding: 10px;
-          background: #201718;
+          background: $dark;
           border-color: var(--white);
           border-radius: 0;
 
@@ -280,7 +280,7 @@ form {
     }
   }
   &-dropdown {
-    background: #201718;
+    background: $dark;
   }
 }
 
