@@ -10,23 +10,22 @@
 }
 
 // main colors
-$main-first-color: #7a0000;
-$main-second-color: #007d00;
-$main-third-color: #000082;
+$main-first-color: #00FF25;
+$main-second-color: #000082;
+$main-third-color: #7a0000;
 
 // colors
 $title-color: #ccc;
 $text-color: var(--white);
-$input-placeholder-color: #A6A6A6;
+$input-placeholder-color: #A19D9B;
 
-// fonts
+// fonts-family
 $font-family-base: 'Montserrat', sans-serif;
 $font-family-custom: 'Arial', sans-serif;
 $font-family-unique: 'Times New Roman', serif;
 
 // font-weight
-$font-weight-medium: 500;
-$font-weight-sbold: 600;
+$font-weight-default: 500;
 
 // font-size
 $font-size-default: 16px;
@@ -36,7 +35,7 @@ $line-height-base: 1.25;
 $transition-base: all .3s ease 0s;
 
 //Bootstrap var
-$primary: #FFC700;
+$primary: #00FF25;
 $dark: #201718;
 
 $enable-shadows: true;
@@ -45,19 +44,18 @@ $grid-gutter-width: 40px;
 
 $grid-breakpoints: (
         xs: 0,
-        sm: 576px,
+        sm: 640px,
         md: 768px,
         lg: 1025px,
-        xl: 1280px,
-        xxl: 1540px,
-        xxxl: 1700px,
+        xl: 1540px,
 );
 
-$container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 980px,
-        xl: 1240px,
-        xxl: 1500px,
-        xxxl: 1660px,
-);
+$container-max-widths: ();
+
+$firstIteration: true;
+@each $breakpoint, $value in $grid-breakpoints {
+  @if not $firstIteration {
+    $container-max-widths: map-merge($container-max-widths, ($breakpoint: $value - $grid-gutter-width));
+  }
+  $firstIteration: false;
+}
